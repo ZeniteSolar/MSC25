@@ -13,7 +13,7 @@
 
 // Escolha seu modo aqui:
 #define ADC_READING_MODE ADC_MODE_AVERAGED
-// ------------------------------------------
+// Escreva o modo na linha acima
 
 // --- Ativação de Módulos ---
 #define USART_ON
