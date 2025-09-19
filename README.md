@@ -97,3 +97,25 @@ A placa se identifica na rede CAN e transmite duas mensagens principais.
     ```bash
     ./up.sh
     ```
+
+ ## Precisa adicionar ao can_ids.h
+  ```
+ // MSC25_1 - Módulo Sensor de Corrente (Sua Nova Placa)
+#define CAN_SIGNATURE_MSC25_1 195
+// MSC25_1 - STATE - Module state report
+#define CAN_MSG_MSC25_1_STATE_ID 121
+#define CAN_MSG_MSC25_1_STATE_LENGTH 3
+#define CAN_MSG_MSC25_1_STATE_FREQUENCY 1
+#define CAN_MSG_MSC25_1_STATE_SIGNATURE_BYTE 0 //<!" Senders signature
+#define CAN_MSG_MSC25_1_STATE_STATE_BYTE 1     //<!" State code
+#define CAN_MSG_MSC25_1_STATE_ERROR_BYTE 2     //<!" Error code
+
+// MSC25_1 - MEASUREMENTS - Current measurements from the sensor
+#define CAN_MSG_MSC25_1_MEASUREMENTS_ID 240
+#define CAN_MSG_MSC25_1_MEASUREMENTS_LENGTH 3
+#define CAN_MSG_MSC25_1_MEASUREMENTS_FREQUENCY 10
+#define CAN_MSG_MSC25_1_MEASUREMENTS_SIGNATURE_BYTE 0    //<!" Senders signature
+#define CAN_MSG_MSC25_1_MEASUREMENTS_CURRENT_L_BYTE 1    //<!" Average current, byte low
+#define CAN_MSG_MSC25_1_MEASUREMENTS_CURRENT_H_BYTE 2    //<!" Average current, byte high
+```
+    
