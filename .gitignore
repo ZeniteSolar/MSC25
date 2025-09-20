@@ -19,6 +19,8 @@ _autosave-*
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
+# Ignore KiCad automatic backup zips
+*-backups/
 
 # Exported BOM files
 *.xml
