@@ -4035,7 +4035,7 @@
 		(fields_autoplaced yes)
 		(uuid "e0af5472-3591-4c78-a5c5-7e005b7bfb8c")
 		(property "Reference" "R3"
-			(at 86.106 136.6519 0)
+			(at 86.36 136.6519 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4043,8 +4043,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 86.106 139.1919 0)
+		(property "Value" "20k"
+			(at 86.36 139.1919 0)
 			(effects
 				(font
 					(size 1.27 1.27)

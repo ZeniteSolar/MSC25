@@ -3827,7 +3827,7 @@
 			)
 		)
 		(property ki_fp_filters "SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*")
-		(path "/6a4927c6-3e9d-481f-a7c7-87205ab2eb3d/4142430f-ebad-4a3e-aac1-85ceeae2784e")
+		(path "/6a4927c6-3e9d-481f-a7c7-87205ab2eb3d/5c19dbcf-4de9-49eb-b427-a8d4ec98b441")
 		(sheetname "/Analog/")
 		(sheetfile "analog.kicad_sch")
 		(attr through_hole)
@@ -9504,7 +9504,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "20k"
 			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "29f973ed-45b5-4eb8-a881-90f03b86c66c")
