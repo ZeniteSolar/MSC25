@@ -4273,7 +4273,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-28_W7.62mm"
+		(property "Footprint" "Package_DIP:DIP-28_W7.62mm_LongPads"
 			(at 113.792 97.536 0)
 			(effects
 				(font

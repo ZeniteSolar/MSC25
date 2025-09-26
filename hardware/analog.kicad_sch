@@ -659,6 +659,147 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Módulo-temperatura-rescue:D_Zener_Small-Device"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener_Small-Device"
+				(at 0 -2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_Small-Device_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.762 1.016) (xy -0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.016) (xy -0.762 0) (xy 0.762 -1.016) (xy 0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_Small-Device_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+12V"
 			(power)
 			(pin_numbers
@@ -910,6 +1051,12 @@
 		(uuid "62bfb784-887e-4cad-a4c0-d2687427fbb1")
 	)
 	(junction
+		(at 138.684 57.404)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8bd15c79-ae63-47ae-86c7-f95c620fb46b")
+	)
+	(junction
 		(at 94.488 57.404)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -969,6 +1116,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.684 58.928) (xy 138.684 57.404)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42a3b4a8-b705-4f78-b0e3-cc32dca073c6")
+	)
+	(wire
+		(pts
 			(xy 94.488 45.466) (xy 94.488 57.404)
 		)
 		(stroke
@@ -1019,6 +1176,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.684 64.008) (xy 138.684 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87bb5cbb-36d4-4cc1-80fd-6c59c95d7931")
+	)
+	(wire
+		(pts
 			(xy 85.598 77.724) (xy 95.504 77.724)
 		)
 		(stroke
@@ -1026,6 +1193,16 @@
 			(type default)
 		)
 		(uuid "91008f47-d6cb-44ef-b226-5d28ac78db8c")
+	)
+	(wire
+		(pts
+			(xy 138.684 57.404) (xy 142.494 57.404)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3dd5e16-c538-435d-a8d1-6f9472ea622b")
 	)
 	(wire
 		(pts
@@ -1109,7 +1286,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.874 57.404) (xy 138.176 57.404)
+			(xy 134.874 57.404) (xy 138.684 57.404)
 		)
 		(stroke
 			(width 0)
@@ -1163,7 +1340,7 @@
 	)
 	(hierarchical_label "S"
 		(shape input)
-		(at 138.176 57.404 0)
+		(at 142.494 57.404 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1306,17 +1483,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Módulo-temperatura-rescue:D_Zener_Small-Device")
+		(at 138.684 61.468 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0df1f97b-af30-4fb8-8c4a-0916a8595962")
+		(property "Reference" "D3"
+			(at 140.97 61.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5V"
+			(at 136.398 61.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
+			(at 138.684 61.468 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.684 61.468 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.684 61.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ef048adc-a7b7-4acc-a37f-cc627e90df2a")
+		)
+		(pin "2"
+			(uuid "07507339-6ac5-4d3c-bad8-1ecd0558d64a")
+		)
+		(instances
+			(project "MSC25"
+				(path "/54fa0170-a23b-4b64-b583-87dd15942089/6a4927c6-3e9d-481f-a7c7-87205ab2eb3d"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Amplifier_Operational:LM324")
 		(at 127.254 57.404 0)
+		(mirror x)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1875112e-37dc-4354-8aa4-cb2db54ea31b")
 		(property "Reference" "U2"
-			(at 127.254 47.498 0)
+			(at 127.254 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1324,7 +1567,7 @@
 			)
 		)
 		(property "Value" "LM324"
-			(at 127.254 50.038 0)
+			(at 127.254 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1332,7 +1575,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125.984 54.864 0)
+			(at 125.984 59.944 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1341,7 +1584,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf"
-			(at 128.524 52.324 0)
+			(at 128.524 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1482,15 +1725,15 @@
 	(symbol
 		(lib_id "Amplifier_Operational:LM324")
 		(at 103.886 59.944 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4142430f-ebad-4a3e-aac1-85ceeae2784e")
 		(property "Reference" "U2"
-			(at 103.886 49.53 0)
+			(at 103.886 70.358 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1498,7 +1741,7 @@
 			)
 		)
 		(property "Value" "LM324"
-			(at 103.886 52.07 0)
+			(at 103.886 67.818 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1506,7 +1749,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 102.616 57.404 0)
+			(at 102.616 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1515,7 +1758,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf"
-			(at 105.156 54.864 0)
+			(at 105.156 65.024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1949,6 +2192,71 @@
 			(project "MSC25"
 				(path "/54fa0170-a23b-4b64-b583-87dd15942089/6a4927c6-3e9d-481f-a7c7-87205ab2eb3d"
 					(reference "#PWR0225")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 138.684 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec99a7c1-5513-4244-bd26-62eebbd626a8")
+		(property "Reference" "#PWR029"
+			(at 138.684 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 138.684 70.4834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.684 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.684 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.684 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0015a22d-adb7-4c2a-9cfb-7187a5c1845a")
+		)
+		(instances
+			(project "MSC25"
+				(path "/54fa0170-a23b-4b64-b583-87dd15942089/6a4927c6-3e9d-481f-a7c7-87205ab2eb3d"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
