@@ -4,7 +4,8 @@
 #include <stdio.h>
 
 #define BAUD 57600
-#define MYUBRR F_CPU/16/BAUD-1
+// Adicionados parenteses para evitar aviso do compilador [-Wparentheses]
+#define MYUBRR ((F_CPU/16/BAUD)-1)
 
 void usart_init(void)
 {

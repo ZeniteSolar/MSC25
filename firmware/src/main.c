@@ -2,63 +2,58 @@
 
 void init(void)
 {
+    // 1. Inicializa Serial
     #ifdef USART_ON
         usart_init();
-        usart_send_string("\n\n--- MSC25_1 Sensor de Corrente ---\n");
-        usart_send_string("Inicializando...\n");
+        usart_send_string("\n\n--- MSC25_1 Firmware ---\n");
+    #endif
+
+    // 2. Teste rápido do LED na inicialização
+    // Isso confirma visualmente que o pino PC5 está correto
+    #ifdef LED_ON
+        set_bit(LED_DDR, LED1); // Configura PC5 como saída
+        
+        // Pisca 3 vezes rápido
+        for(int i=0; i<3; i++) {
+            set_bit(LED_PORT, LED1); 
+            for(volatile long j=0; j<100000; j++); // Delay simples
+            clr_bit(LED_PORT, LED1);
+            for(volatile long j=0; j<100000; j++);
+        }
+        VERBOSE_MSG_INIT(usart_send_string("LED Init... OK\n"));
     #endif
 
     #ifdef WATCHDOG_ON
-        wdt_enable(WDTO_2S); // Watchdog de 2 segundos
-        VERBOSE_MSG_INIT(usart_send_string("WATCHDOG... OK!\n"));
+        wdt_enable(WDTO_2S);
     #endif
-
     wdt_reset();
-
-    #ifdef LED_ON
-        set_bit(LED_DDR, LED1);
-        VERBOSE_MSG_INIT(usart_send_string("LED... OK!\n"));
-    #endif
 
     #ifdef SPI_ON
-        // Configuração dos pinos SPI (CS como saída)
         DDRB |= (1 << PB2) | (1 << PB3) | (1 << PB5);
-        PORTB |= (1 << PB2); // CS em high
-        VERBOSE_MSG_INIT(usart_send_string("SPI... OK!\n"));
+        PORTB |= (1 << PB2);
+        VERBOSE_MSG_INIT(usart_send_string("SPI... OK\n"));
     #endif
 
-    wdt_reset();
-
     #ifdef CAN_ON
-        VERBOSE_MSG_INIT(usart_send_string("CAN (500kbps)..."));
+        VERBOSE_MSG_INIT(usart_send_string("CAN... "));
         if (!can_init(BITRATE_500_KBPS)) {
-            VERBOSE_MSG_INIT(usart_send_string(" FALHA!\n"));
+            VERBOSE_MSG_INIT(usart_send_string("FALHA (Sem ACK)\n"));
         } else {
-            VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
+            VERBOSE_MSG_INIT(usart_send_string("OK\n"));
         }
     #endif
 
-    wdt_reset();
-
     #ifdef ADC_ON
-        VERBOSE_MSG_INIT(usart_send_string("ADC..."));
         adc_init();
-        VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
+        VERBOSE_MSG_INIT(usart_send_string("ADC... OK\n"));
     #endif
     
-    wdt_reset();
-
  	#ifdef MACHINE_ON
-        VERBOSE_MSG_INIT(usart_send_string("Maquina de Estados..."));
 		machine_init();
-        VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
 	#endif
 
-    wdt_reset();
-
-    // Habilita interrupções globais
-    sei();
-    usart_send_string("Inicializacao completa. Executando...\n");
+    sei(); // Habilita interrupções
+    usart_send_string("Sistema Iniciado.\n");
 }
 
 int main(void)
